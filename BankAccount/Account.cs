@@ -28,6 +28,16 @@ namespace BankAccount
         }
 
         //Constructors
+        public Account()
+        {
+            //Default
+        }
+        public Account(int accountNumber, int accountBalance, string accountType)
+        {
+            this.accountNumber = accountNumber;
+            this.accountBalance = accountBalance;
+            this.accountType = accountType;
+        }
 
 
     }

@@ -34,13 +34,13 @@ namespace BankAccount
         {
             //Default
         }
-        public Client(string clientName, string clientAddress)
+        public Client(string clientName, string clientAddress, double clientNumber)
         {
             this.clientName = clientName;
             this.clientAddress = clientAddress;
+            this.clientNumber = clientNumber;
         }
-
-        
+       
 
     }
 }
