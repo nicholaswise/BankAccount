@@ -8,7 +8,25 @@ namespace BankAccount
 {
     class Checking : Account
     {
+
+
+        protected int checkingBalance;
+
+        public int CheckingBalance { get; }
+
+        public Checking()
+        {
+            //default
+        }
+        public Checking(int checkingBalance)
+        {
+            checkingBalance = 1000;
+        }
+
         
-     
+
+
+
+
     }
 }

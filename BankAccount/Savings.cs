@@ -8,6 +8,17 @@ namespace BankAccount
 {
     class Savings : Account
     {
+        protected int savingsBalance;
 
+        public int SavingsBalance { get; }
+
+        public Savings()
+        {
+            //default
+        }
+        public Savings(int savingsBalance)
+        {
+            savingsBalance = 100000;
+        }
     }
 }

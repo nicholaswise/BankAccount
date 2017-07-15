@@ -12,7 +12,7 @@ namespace BankAccount
 
         private string clientName;
         private string clientAddress;
-        private double clientNumber;
+        private string clientNumber;
 
         //Properties
 
@@ -24,7 +24,7 @@ namespace BankAccount
         {
             get { return this.clientAddress; }
         }
-        private double Number
+        private string Number
         {
             get { return this.clientNumber; }
         }
@@ -34,7 +34,7 @@ namespace BankAccount
         {
             //Default
         }
-        public Client(string clientName, string clientAddress, double clientNumber)
+        public Client(string clientName, string clientAddress, string clientNumber)
         {
             this.clientName = clientName;
             this.clientAddress = clientAddress;

@@ -14,15 +14,15 @@ namespace BankAccount
         protected string accountType;
 
         //Properties
-        protected int Number
+        public int Number
         {
             get { return this.accountNumber; }
         }
-        protected int Balance
+        public int Balance
         {
             get { return this.accountBalance; }
         }
-        protected string Type
+        public string Type
         {
             get { return this.accountType; }
         }
@@ -38,6 +38,11 @@ namespace BankAccount
             this.accountBalance = accountBalance;
             this.accountType = accountType;
         }
+        public virtual void Deposit()
+        {
+
+        }
+        
 
 
     }
