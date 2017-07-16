@@ -11,37 +11,44 @@ namespace BankAccount
 
 
         public int checkingBalance;
-        private double depositAmount;
+        //public int depositAmount;
+        public int withdrawlAmount;
 
         public int CheckingBalance { get; }
-        public double DepositAmount { get; set; }
+        public int DepositAmount { get; set; }
+        public int WithdrawlAmount { get; set; }
 
         public Checking()
         {
 
         }
 
-        public Checking(int checkingBalance, int accountBalance, double depositAmount, int accountNumber)
+        public Checking(int checkingBalance, int accountBalance) //int depositAmount)
         {
             this.checkingBalance = checkingBalance;
             this.accountBalance = accountBalance;
-            this.depositAmount = depositAmount;
-            this.accountNumber = accountNumber;
+            //this.depositAmount = depositAmount;
+            //this.accountNumber = accountNumber;
         }
 
         public virtual int GetCheckBal()
         {
-            return accountBalance;
+            return checkingBalance;
         }
 
-        //public override double Deposit(double depositAmount)
-        //{
-        //    this.checkingBalance += depositAmount;
-        //    return Balance;
-        //}
+        public virtual int Deposit(int depositAmount)
+        {
+            this.checkingBalance += depositAmount;
+            return checkingBalance;
+        }
+        public virtual int Withdrawl(int withdrawlAmount)
+        {
+            this.checkingBalance -= withdrawlAmount;
+            return checkingBalance;
+        }
 
 
-        
+
 
 
 

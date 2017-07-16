@@ -9,7 +9,7 @@ namespace BankAccount
     class Savings : Account
     {
         public int savingsBalance;
-        public int depositAmount;
+        //public int depositAmount;
 
         public int SavingsBalance { get; }
         public int DepositAmount { get; set; }
@@ -23,8 +23,22 @@ namespace BankAccount
         {
             this.savingsBalance = savingsBalance;
             this.accountBalance = accountBalance;
+        }
 
-            savingsBalance = 5000;
+        public virtual int GetSavBal()
+        {
+            return savingsBalance;
+        }
+
+        public virtual int Deposit(int depositAmount)
+        {
+            this.savingsBalance += depositAmount;
+            return savingsBalance;
+        }
+        public virtual int Withdrawl(int withdrawlAmount)
+        {
+            this.savingsBalance -= withdrawlAmount;
+            return savingsBalance;
         }
     }
 }
