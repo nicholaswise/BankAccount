@@ -12,13 +12,11 @@ namespace BankAccount
 
         public int SavingsBalance { get; }
 
-        public Savings()
+        
+        public Savings(int savingsBalance, int accountBalance)
         {
-            //default
-        }
-        public Savings(int savingsBalance)
-        {
-            savingsBalance = 100000;
+            this.savingsBalance = savingsBalance;
+            this.accountBalance = accountBalance;
         }
     }
 }

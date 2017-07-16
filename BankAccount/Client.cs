@@ -10,9 +10,9 @@ namespace BankAccount
     {
         //Fields
 
-        private string clientName;
-        private string clientAddress;
-        private string clientNumber;
+        public string clientName;
+        public string clientAddress;
+        public string clientNumber;
 
         //Properties
 
@@ -41,9 +41,12 @@ namespace BankAccount
             this.clientNumber = clientNumber;
         }
 
-        public virtual void Client1()
+        public virtual string ClientInfo()
         {
-            
+            return
+            clientName = "Wall E";
+            clientAddress = "1 Storage Container Way \nNew York, NY \n10001";
+            clientNumber = "212-123-4567";
         }
        
 

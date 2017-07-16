@@ -20,8 +20,8 @@ namespace BankAccount
             {
                 if (userResponse1 == 1)
                 {
-                    Client client1 = new Client("Wall E", "1 Storage Container Way \nNew York, NY 10001", "212-123-4567");
-                    Console.WriteLine(client1);
+                    Client client1 = new Client("Wall E", "1 Storage Container Way", "212-123-4567");
+                    Console.WriteLine();
                 }
             }
 
@@ -39,7 +39,7 @@ namespace BankAccount
                     }
                     else if (userSelect1 == 2)
                     {
-                        Savings balanceSavings = new BankAccount.Savings();
+                        Savings balanceSavings = new Savings(100000, 6000);
                         Console.WriteLine("Your balance is: " + balanceSavings);
                     }
                 }
