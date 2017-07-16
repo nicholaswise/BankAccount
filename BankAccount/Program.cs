@@ -12,30 +12,52 @@ namespace BankAccount
 
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome To Console Bank \nHow can we help you today? ");
-            Console.WriteLine("1. View Client Information \n2. View Account Balance \n3. Deposit Funds \n4. Withdraw Funds \n5. Exit \n[Type in number for selection and press ENTER]: ");
+            Client client1 = new Client("John Francis Donaghy", "123 Central Ave. Parkway, New York, NY", "212-555-0011");
+            Checking checking = new Checking(50000, 100000, 5, 00001);
 
-            //1
-            int userResponse1 = int.Parse(Console.ReadLine());
+            string makeTransaction = "yes";
+            string makeTransactionAny = makeTransaction.ToLower();
+            do
             {
-                if (userResponse1 == 1)
+                Console.WriteLine("Welcome To Console Bank \nHow can we help you today? ");
+                Console.WriteLine("\n\n1. View Client Information");
+                Console.WriteLine("2. View Account Balance");
+                Console.WriteLine("3. Deposit Funds");
+                Console.WriteLine("4. Withdraw Funds");
+                Console.WriteLine("5. Exit");
+                Console.WriteLine("[Type in number for selection and press ENTER]: ");
+                //1
+                int userSelect1 = int.Parse(Console.ReadLine());
+                while (userSelect1 < 1 || userSelect1 > 5)
                 {
-                    Client client1 = new Client("Wall E", "1 Storage Container Way", "212-123-4567");
-                    Console.WriteLine();
+                    Console.WriteLine("Please select a valid option: ");
+                    userSelect1 = int.Parse(Console.ReadLine());
                 }
-            }
 
-            //2
-            int userResponse2 = int.Parse(Console.ReadLine());
-            {
+
+                if (userSelect1 == 1)
+                {
+                    client1.ClientInfo();
+                    Console.WriteLine(client1);
+                }
+                else if (userSelect1 == 5)
+                {
+                    Console.WriteLine("Thanks for banking with us.");
+                    Environment.Exit(0);
+                }
+
+
+                //2
+
+                int userResponse2 = int.Parse(Console.ReadLine());
                 if (userResponse2 == 2)
+                
                 {
                     Console.WriteLine("1. Checking \n2. Savings \n[Type in number for selection and press ENTER]: ");
-                    int userSelect1 = int.Parse(Console.ReadLine());
-                    if (userSelect1 == 1)
+                    int userSub1 = int.Parse(Console.ReadLine());
+                    if (userSub1 == 1)
                     {
-                        Checking checkingBalance = new Checking(1000, 6000);
-                        Console.WriteLine("Your balance is: " + checkingBalance);
+                        Console.WriteLine("Your balance is: " + checking);
                     }
                     else if (userSelect1 == 2)
                     {
@@ -43,11 +65,11 @@ namespace BankAccount
                         Console.WriteLine("Your balance is: " + balanceSavings);
                     }
                 }
-            }
 
-            //3
-            int userResponse3 = int.Parse(Console.ReadLine());
-            {
+
+                //3
+                int userResponse3 = int.Parse(Console.ReadLine());
+
                 if (userResponse3 == 3)
                 {
                     Console.WriteLine("Which account? \n1. Checking \n2. Savings \n[Type in number for selection and press ENTER]: ");
@@ -64,11 +86,11 @@ namespace BankAccount
                         int depositSavings = int.Parse(Console.ReadLine());
                     }
                 }
-            }
 
-            //4
-            int userResponse4 = int.Parse(Console.ReadLine());
-            {
+
+                //4
+                int userResponse4 = int.Parse(Console.ReadLine());
+
                 if (userResponse4 == 4)
                 {
                     Console.WriteLine("Which account? \n1. Checking \n2. Savings \n[Type in number for selection and press ENTER]: ");
@@ -84,20 +106,29 @@ namespace BankAccount
                         int depositSavings = int.Parse(Console.ReadLine());
                     }
                 }
-            }
 
-            //5
-            int userResponse5 = int.Parse(Console.ReadLine());
-            if (userResponse5 == 5)
+
+                //5
+                int userResponse5 = int.Parse(Console.ReadLine());
+                if (userResponse5 == 5)
+                {
+                    Console.WriteLine("Thanks for banking with Console Bank! \nHave a nice day.");
+                    Environment.Exit(0);
+                }
+
+            } while (makeTransactionAny == "yes");
+        }
+
+        public static string Transaction()
+        {
+            Console.WriteLine("Do you want to make another transaction? y/n");
+            string newTransaction = Console.ReadLine().ToLower();
+            Console.Clear();
+            if (newTransaction == "no")
             {
-                Console.WriteLine("Thanks for banking with Console Bank! \nHave a nice day.");
                 Environment.Exit(0);
             }
-
-
-
-
-
+            return newTransaction;
         }
     }
 }

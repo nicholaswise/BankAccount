@@ -8,6 +8,7 @@ namespace BankAccount
 {
     class Client
     {
+
         //Fields
 
         public string clientName;
@@ -18,15 +19,15 @@ namespace BankAccount
 
         public string Name
         {
-            get { return this.clientName; }
+            get;
         }
         public string Address
         {
-            get { return this.clientAddress; }
+            get;
         }
         public string Number
         {
-            get { return this.clientNumber; }
+            get;
         }
 
         //Constructors
@@ -41,14 +42,13 @@ namespace BankAccount
             this.clientNumber = clientNumber;
         }
 
-        public virtual string ClientInfo()
+        public void ClientInfo()
         {
-            return
-            clientName = "Wall E";
-            clientAddress = "1 Storage Container Way \nNew York, NY \n10001";
-            clientNumber = "212-123-4567";
+            Console.WriteLine(clientName);
+            Console.WriteLine(clientAddress);
+            Console.WriteLine(clientNumber);
         }
-       
+
 
     }
 }
