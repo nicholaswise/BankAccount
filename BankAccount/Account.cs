@@ -9,9 +9,9 @@ namespace BankAccount
     class Account
     {
         //Fields
-        protected int accountNumber;
-        protected int accountBalance;
-        protected string accountType;
+        public int accountNumber;
+        public int accountBalance;
+        public string accountType;
 
         //Properties
         public int Number
@@ -38,9 +38,9 @@ namespace BankAccount
             this.accountBalance = accountBalance;
             this.accountType = accountType;
         }
-        public virtual void Deposit()
+        public virtual string GetAcctBal()
         {
-
+            return "Your balance is " + accountBalance + "\n";
         }
         
 

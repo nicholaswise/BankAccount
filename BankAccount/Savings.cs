@@ -8,7 +8,7 @@ namespace BankAccount
 {
     class Savings : Account
     {
-        protected int savingsBalance;
+        public int savingsBalance;
 
         public int SavingsBalance { get; }
 

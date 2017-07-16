@@ -16,15 +16,15 @@ namespace BankAccount
 
         //Properties
 
-        private string Name
+        public string Name
         {
             get { return this.clientName; }
         }
-        private string Address
+        public string Address
         {
             get { return this.clientAddress; }
         }
-        private string Number
+        public string Number
         {
             get { return this.clientNumber; }
         }
@@ -39,6 +39,11 @@ namespace BankAccount
             this.clientName = clientName;
             this.clientAddress = clientAddress;
             this.clientNumber = clientNumber;
+        }
+
+        public virtual void Client1()
+        {
+            
         }
        
 

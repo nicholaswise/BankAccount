@@ -10,20 +10,25 @@ namespace BankAccount
     {
 
 
-        protected int checkingBalance;
+        public int checkingBalance;
+        private static int depositAmount;
 
         public int CheckingBalance { get; }
 
-        public Checking()
+        public Checking(int checkingBalance, int accountBalance)
         {
-            //default
-        }
-        public Checking(int checkingBalance)
-        {
-            checkingBalance = 1000;
+            this.checkingBalance = checkingBalance;
+            this.accountBalance = accountBalance;
         }
 
-        
+
+        public static void Add()
+        {
+            //checkingBalance + depositAmount;
+        }
+
+
+
 
 
 
