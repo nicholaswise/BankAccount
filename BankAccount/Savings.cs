@@ -8,10 +8,10 @@ namespace BankAccount
 {
     class Savings : Account
     {
-        public int savingsBalance;
+        public double savingsBalance;
         //public int depositAmount;
 
-        public int SavingsBalance { get; }
+        public double SavingsBalance { get; }
         //public int DepositAmount { get; set; }
 
         public Savings()
@@ -19,23 +19,23 @@ namespace BankAccount
 
         }
         
-        public Savings(int savingsBalance, int accountBalance)
+        public Savings(double savingsBalance, double accountBalance)
         {
             this.savingsBalance = savingsBalance;
             this.accountBalance = accountBalance;
         }
 
-        public virtual int GetSavBal()
+        public virtual double GetSavBal()
         {
             return savingsBalance;
         }
 
-        public virtual int Deposit(int depositAmount)
+        public virtual double Deposit(double depositAmount)
         {
             this.savingsBalance += depositAmount;
             return savingsBalance;
         }
-        public virtual int Withdrawl(int withdrawlAmount)
+        public virtual double Withdrawl(double withdrawlAmount)
         {
             this.savingsBalance -= withdrawlAmount;
             return savingsBalance;

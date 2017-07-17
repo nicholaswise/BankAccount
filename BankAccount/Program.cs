@@ -75,7 +75,7 @@ namespace BankAccount
                     if (userResponse03 == 1)
                     {
                         Console.WriteLine("\nTotal to deposit into checking: ");
-                        int checkDeposit = int.Parse(Console.ReadLine());
+                        double checkDeposit = double.Parse(Console.ReadLine());
                         checking.Deposit(checkDeposit);
                         Console.WriteLine("\nNew checking balance: $" + checking.GetCheckBal().ToString("N2"));
                         makeTransactionAny = Transaction();
@@ -85,7 +85,7 @@ namespace BankAccount
                     else if (userResponse03 == 2)
                     {
                         Console.WriteLine("\nTotal to deposit into savings: ");
-                        int depositSavings = int.Parse(Console.ReadLine());
+                        double depositSavings = double.Parse(Console.ReadLine());
                         savings.Deposit(depositSavings);
                         Console.WriteLine("\nNew savings balance: $" + savings.GetSavBal().ToString("N2"));
                         makeTransactionAny = Transaction();
@@ -103,7 +103,7 @@ namespace BankAccount
                     if (userResponse04 == 1)
                     {
                         Console.WriteLine("\nTotal withdrawl from checking: ");
-                        int withdrawlChecking = int.Parse(Console.ReadLine());
+                        double withdrawlChecking = double.Parse(Console.ReadLine());
                         checking.Withdrawl(withdrawlChecking);
                         Console.WriteLine("\nNew checking balance: $" + checking.GetCheckBal().ToString("N2"));
                         makeTransactionAny = Transaction();
@@ -111,7 +111,7 @@ namespace BankAccount
                     else if (userResponse04 == 2)
                     {
                         Console.WriteLine("\nTotal withdrawl from savings: ");
-                        int withdrawlSavings = int.Parse(Console.ReadLine());
+                        double withdrawlSavings = double.Parse(Console.ReadLine());
                         savings.Withdrawl(withdrawlSavings);
                         Console.WriteLine("\nNew savings balance: $" + savings.GetSavBal().ToString("N2"));
                         makeTransactionAny = Transaction();

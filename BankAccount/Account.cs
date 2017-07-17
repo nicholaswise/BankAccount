@@ -10,7 +10,7 @@ namespace BankAccount
     {
         //Fields
         protected int accountNumber;
-        protected int accountBalance;
+        protected double accountBalance;
         protected string accountType;
 
         //Properties
@@ -18,7 +18,7 @@ namespace BankAccount
         {
             get { return this.accountNumber; }
         }
-        public int Balance
+        public double Balance
         {
             get;set;
         }
@@ -32,7 +32,7 @@ namespace BankAccount
         {
             //Default
         }
-        public Account(int accountNumber, int accountBalance, string accountType)
+        public Account(int accountNumber, double accountBalance, string accountType)
         {
             this.accountNumber = accountNumber;
             this.accountBalance = accountBalance;
