@@ -10,7 +10,7 @@ namespace BankAccount
     {
         static void Main(string[] args)
         {
-            Client client1 = new Client("John Francis Donaghy", "123 Central Ave. Parkway, New York, NY", "212-555-0011");
+            Client client1 = new Client("\nJohn Francis Donaghy", "123 Broadway Ave., New York, NY", "212-555-0011");
             Checking checking = new Checking(5000, 50000);
             Savings savings = new Savings(50000, 55000);
 
@@ -36,8 +36,9 @@ namespace BankAccount
                 if (userSelect == 1)
                 {
                     client1.ClientInfo();
-                    Console.WriteLine(client1 + "\n");
+                    Console.WriteLine();
                     makeTransactionAny = Transaction();
+                    Console.Clear();
                 }
                 else if (userSelect == 5)
                 {
@@ -57,11 +58,13 @@ namespace BankAccount
                     {
                         Console.WriteLine("\nYour balance is: $" + checking.GetCheckBal().ToString("N2"));
                         makeTransactionAny = Transaction();
+                        Console.Clear();
                     }
                     else if (userSub1 == 2)
                     {
                         Console.WriteLine("\nYour balance is: $" + savings.GetSavBal().ToString("N2"));
                         makeTransactionAny = Transaction();
+                        Console.Clear();
                     }
                 }
 
@@ -79,6 +82,7 @@ namespace BankAccount
                         checking.Deposit(checkDeposit);
                         Console.WriteLine("\nNew checking balance: $" + checking.GetCheckBal().ToString("N2"));
                         makeTransactionAny = Transaction();
+                        Console.Clear();
 
                     }
 
@@ -89,6 +93,7 @@ namespace BankAccount
                         savings.Deposit(depositSavings);
                         Console.WriteLine("\nNew savings balance: $" + savings.GetSavBal().ToString("N2"));
                         makeTransactionAny = Transaction();
+                        Console.Clear();
                     }
                 }
 
@@ -107,6 +112,7 @@ namespace BankAccount
                         checking.Withdrawl(withdrawlChecking);
                         Console.WriteLine("\nNew checking balance: $" + checking.GetCheckBal().ToString("N2"));
                         makeTransactionAny = Transaction();
+                        Console.Clear();
                     }
                     else if (userResponse04 == 2)
                     {
@@ -115,6 +121,7 @@ namespace BankAccount
                         savings.Withdrawl(withdrawlSavings);
                         Console.WriteLine("\nNew savings balance: $" + savings.GetSavBal().ToString("N2"));
                         makeTransactionAny = Transaction();
+                        Console.Clear();
                     }
                     //5
 

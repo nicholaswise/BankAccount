@@ -8,7 +8,6 @@ namespace BankAccount
 {
     class Client
     {
-
         //Fields
 
         public string clientName;
@@ -48,7 +47,5 @@ namespace BankAccount
             Console.WriteLine(clientAddress);
             Console.WriteLine(clientNumber);
         }
-
-
     }
 }

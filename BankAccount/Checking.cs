@@ -8,27 +8,19 @@ namespace BankAccount
 {
     class Checking : Account
     {
-
-
         public double checkingBalance;
-        //public int depositAmount;
-        //public int withdrawlAmount;
 
         public double CheckingBalance { get; }
-        //public int DepositAmount { get; set; }
-        //public int WithdrawlAmount { get; set; }
 
         public Checking()
         {
-
+            //Default
         }
 
-        public Checking(double checkingBalance, double accountBalance) //int depositAmount)
+        public Checking(double checkingBalance, double accountBalance)
         {
             this.checkingBalance = checkingBalance;
             this.accountBalance = accountBalance;
-            //this.depositAmount = depositAmount;
-            //this.accountNumber = accountNumber;
         }
 
         public virtual double GetCheckBal()
@@ -46,15 +38,5 @@ namespace BankAccount
             this.checkingBalance -= withdrawlAmount;
             return checkingBalance;
         }
-
-
-
-
-
-
-
-
-
-
     }
 }

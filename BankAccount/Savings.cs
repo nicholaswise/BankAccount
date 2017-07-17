@@ -9,16 +9,14 @@ namespace BankAccount
     class Savings : Account
     {
         public double savingsBalance;
-        //public int depositAmount;
 
         public double SavingsBalance { get; }
-        //public int DepositAmount { get; set; }
 
         public Savings()
         {
-
+            //Default
         }
-        
+
         public Savings(double savingsBalance, double accountBalance)
         {
             this.savingsBalance = savingsBalance;

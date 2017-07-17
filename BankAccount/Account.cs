@@ -20,7 +20,7 @@ namespace BankAccount
         }
         public double Balance
         {
-            get;set;
+            get; set;
         }
         public string Type
         {
@@ -38,15 +38,5 @@ namespace BankAccount
             this.accountBalance = accountBalance;
             this.accountType = accountType;
         }
-        
-        
-        
-        //public virtual string GetAcctBal()
-        //{
-        //    return "Your balance is " + accountBalance + "\n";
-        //}
-        
-
-
     }
 }
