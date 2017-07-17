@@ -12,7 +12,7 @@ namespace BankAccount
         //public int depositAmount;
 
         public int SavingsBalance { get; }
-        public int DepositAmount { get; set; }
+        //public int DepositAmount { get; set; }
 
         public Savings()
         {

@@ -12,11 +12,11 @@ namespace BankAccount
 
         public int checkingBalance;
         //public int depositAmount;
-        public int withdrawlAmount;
+        //public int withdrawlAmount;
 
         public int CheckingBalance { get; }
-        public int DepositAmount { get; set; }
-        public int WithdrawlAmount { get; set; }
+        //public int DepositAmount { get; set; }
+        //public int WithdrawlAmount { get; set; }
 
         public Checking()
         {
